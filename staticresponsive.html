@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Responsive Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="spwstyles.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header-left">
+                <a href="staticresponsive.html">
+                    <p>Static Responsive</p>
+                </a>
+                <div class="divider hide-mobile"></div>
+                <a href="#" class="home hide-mobile">Home</a>
+            </div>
+            <nav>
+                <a href="#" class="menu-open hide-desktop">
+                    <img src="iconmonstr-menu-lined-48.png" alt="Menu">
+                </a>
+                <ul>
+                    <li class="hide-desktop">
+                        <a href="#" class="menu-close">
+                            <img src="iconmonstr-x-mark-8-48.png" alt="Close">
+                        </a>
+                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Static Responsive Website</h1>
+            <p class="subhead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus vel culpa in odit fuga, totam corrupti ipsam perspiciatis exercitationem assumenda! Temporibus distinctio voluptatibus nesciunt quaerat nobis praesentium facilis, aliquam deleniti.</p>
+            <a href="#" class="register">Create account</a>
+        </main>
+    </div>
+    <script>
+        const menu = document.querySelector('nav ul');
+        const menuBtn = document.querySelector('.menu-open');
+        const closeBtn = document.querySelector('.menu-close');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            menu.classList.remove('open');
+        });
+    </script>
+</body>
+</html>

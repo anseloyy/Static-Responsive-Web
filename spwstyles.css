@@ -1,0 +1,145 @@
+body {
+    background-color: rgb(243, 242, 222);
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+.wrap {
+    margin: 2em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    margin: 0;
+    list-style: none;
+    width: 40%;
+    text-align: right;
+    padding: 2em;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+nav ul li {
+    margin: 2em 0;
+}
+
+nav ul li:nth-of-type(1) {
+    margin-bottom: 4em;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.open {
+    transform: translateX(0%);
+}
+
+h1, p {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 3em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.register {
+    background-color: #99408a;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: black;
+    border-radius: .3em;
+}
+
+@media (min-width: 750px) {
+    .wrap {
+        margin: 0 4em;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    .hide-mobile {
+        display: block;
+    }
+
+    .header-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .header-left a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    .divider {
+        height: 50px;
+        width: 1px;
+        border-right: 1px solid gray;
+    }
+
+    nav ul {
+        position: unset;
+        background: none;
+        display: flex;
+        gap: 2em;
+        height: auto;
+        width: auto;
+        transform: translateX(0%);
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 950px) {
+    h1, p {
+        text-align: left;
+    }
+
+    main {
+        width: 50%;
+    }
+}
